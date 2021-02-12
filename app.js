@@ -69,6 +69,12 @@ app.delete("/campgrounds/:id", async (req, res) => {
   res.redirect("/campgrounds");
 });
 
+app.use((err, req, res, next) => {
+  console.log("*********************************");
+  console.log("**************error**************");
+  console.log("*********************************");
+});
+
 app.listen(3000, () => {
   console.log("Serving on port 3000");
 });
